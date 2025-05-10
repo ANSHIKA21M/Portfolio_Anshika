@@ -42,14 +42,17 @@ const Skills = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="hover:shadow-md transition-shadow">
+            <Card 
+              key={index} 
+              className="hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:border-primary/30"
+            >
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold mb-4 text-primary">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:bg-primary hover:text-white cursor-default"
                     >
                       {skill}
                     </span>

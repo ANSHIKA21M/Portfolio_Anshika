@@ -19,16 +19,16 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#home" className="text-gray-400 hover:text-white transition-colors hover:underline">Home</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#about" className="text-gray-400 hover:text-white transition-colors hover:underline">About</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors">Projects</a>
+                <a href="#projects" className="text-gray-400 hover:text-white transition-colors hover:underline">Projects</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#contact" className="text-gray-400 hover:text-white transition-colors hover:underline">Contact</a>
               </li>
             </ul>
           </div>
@@ -39,6 +39,7 @@ const Footer = () => {
               <Button 
                 variant="outline"
                 size="sm"
+                className="transition-colors hover:bg-white/20 hover:border-white"
                 asChild
               >
                 <a 
@@ -53,6 +54,7 @@ const Footer = () => {
               <Button 
                 variant="outline"
                 size="sm"
+                className="transition-colors hover:bg-white/20 hover:border-white"
                 asChild
               >
                 <a 

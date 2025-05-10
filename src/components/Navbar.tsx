@@ -61,7 +61,7 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="font-bold text-2xl text-primary">
+        <div className="font-bold text-2xl text-primary hover:scale-105 transition-transform duration-300 cursor-pointer">
           <span className="font-bold">Anshika</span>
         </div>
         
@@ -72,8 +72,8 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={cn(
-                "font-medium text-base hover:text-primary transition-colors",
-                activeSection === item.id ? "text-primary" : "text-gray-600"
+                "font-medium text-base transition-all duration-300 hover:text-primary relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
+                activeSection === item.id ? "text-primary after:scale-x-100" : "text-gray-600"
               )}
             >
               {item.label}
@@ -84,7 +84,7 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
         {/* Mobile Menu Button */}
         <button 
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-gray-800 hover:text-primary"
+          className="md:hidden text-gray-800 hover:text-primary transition-colors hover:scale-110 transform duration-300"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -99,7 +99,7 @@ const Navbar = ({ activeSection, setActiveSection }: NavbarProps) => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "font-medium text-base hover:text-primary transition-colors text-left py-2",
+                  "font-medium text-base transition-colors duration-300 hover:text-primary hover:translate-x-2 text-left py-2",
                   activeSection === item.id ? "text-primary" : "text-gray-600"
                 )}
               >

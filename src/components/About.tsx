@@ -23,7 +23,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="outline" 
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105"
               asChild
             >
               <a href="https://github.com/ANSHIKA21M" target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ const About = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105"
               asChild
             >
               <a href="https://linkedin.com/in/anshika-srivastava" target="_blank" rel="noopener noreferrer">
@@ -40,7 +40,7 @@ const About = () => {
               </a>
             </Button>
             <Button 
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
               asChild
             >
               <a href="#" download>

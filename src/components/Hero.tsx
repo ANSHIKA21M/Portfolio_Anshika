@@ -36,12 +36,14 @@ const Hero = ({ setActiveSection }: HeroProps) => {
               <Button 
                 onClick={scrollToAbout}
                 size="lg"
+                className="transition-all duration-300 hover:shadow-lg hover:bg-primary/90 transform hover:scale-105"
               >
                 Learn More
               </Button>
               <Button 
                 variant="outline" 
-                size="lg" 
+                size="lg"
+                className="transition-all duration-300 hover:bg-primary hover:text-white transform hover:scale-105" 
                 asChild
               >
                 <a href="#contact">Contact Me</a>
@@ -50,14 +52,18 @@ const Hero = ({ setActiveSection }: HeroProps) => {
           </div>
           
           <div className="md:w-1/2 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center transition-transform hover:scale-105 hover:shadow-xl duration-500">
               <div className="text-6xl md:text-8xl font-bold text-primary/80">AS</div>
             </div>
           </div>
         </div>
         
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-          <button onClick={scrollToAbout} aria-label="Scroll down">
+          <button 
+            onClick={scrollToAbout} 
+            aria-label="Scroll down"
+            className="transition-transform hover:scale-125 duration-300"
+          >
             <ArrowDownCircle className="text-primary/70 hover:text-primary" size={36} />
           </button>
         </div>
