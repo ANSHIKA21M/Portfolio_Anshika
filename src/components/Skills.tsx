@@ -34,25 +34,25 @@ const Skills = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-50">
+    <div className="py-20 bg-[#080C14]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Technical <span className="text-primary">Skills</span>
+          Technical <span className="text-neon-blue neon-text">Skills</span>
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] hover:border-primary/30"
+              className="neon-card hover:animate-neon-glow"
             >
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-primary">{category.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-neon-blue">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:bg-primary hover:text-white cursor-default"
+                      className="neon-badge bg-secondary/50 text-white px-3 py-1 rounded-full text-sm font-medium"
                     >
                       {skill}
                     </span>
